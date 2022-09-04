@@ -2,24 +2,14 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export const Header = () => {
+export const Footer = () => {
   return (
-    <header>
+    <footer className="px-4 text-gray-600 bg-gray-200">
       <Link href="/" passHref>
-        <a className="flex justify-item-center">
-          <Image
-            alt={"logo"}
-            height={50}
-            src={"logo.png"}
-            width={50}
-          />
+        <a>
+          <small>&copy; 2022 nixiee.plus</small>
         </a>
       </Link>
-      <Link href="/" passHref>
-        <a className="text-4xl text-center flex justify-items-center">
-          <h1 className="pt-4">Manga List</h1>
-        </a>
-      </Link>
-    </header>
+    </footer>
   )
 };
