@@ -10,7 +10,7 @@ export const Header = () => {
           <Image
             alt={"logo"}
             height={50}
-            src={"logo.png"}
+            src={"/logo.png"}
             width={50}
           />
         </a>
