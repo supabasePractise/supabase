@@ -13,3 +13,16 @@ if (!SUPABASE_KEY) {
 }
 
 export const client = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// manga_titleから情報を取得する
+export const getTitles = async () => {
+  const { data, error } = await client
+    .from("manga_title")
+    .select("*")
+    .order("title");
+
+    if(!error && data) {
+      return data;
+    }
+    return [];
+};

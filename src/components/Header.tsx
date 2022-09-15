@@ -17,7 +17,7 @@ export const Header = () => {
       </Link>
       <Link href="/" passHref>
         <a className="text-4xl text-center flex justify-items-center">
-          <h1 className="pt-4">Manga List</h1>
+          <h1 className="pt-4">Supa Base</h1>
         </a>
       </Link>
     </header>
