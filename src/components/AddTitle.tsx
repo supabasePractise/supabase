@@ -25,7 +25,7 @@ export const AddTitle = (props: Props) => {
         setIsOpen(false);
     }, []);
 
-    // ここから
+    // タイトルを入力した時のエラーハンドリング
     const handleAdd = useCallback (
         async (uuid: string) => {
             if(title == "") {
@@ -54,7 +54,7 @@ export const AddTitle = (props: Props) => {
             </div>
             <div className="mt-2 text-center">Add New</div>
           </div>
-
+          {/* ここから */}
           <Transition>
 
           </Transition>
