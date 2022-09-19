@@ -32,6 +32,7 @@ export const AddTitle = (props: Props) => {
                 alert("Input Title.");
                 return;
             }
+
             const { data, error } = await client
                 .from("manga_title")
                 .insert([{ user_id: uuid, title: title, author: author }]);
@@ -55,8 +56,14 @@ export const AddTitle = (props: Props) => {
             <div className="mt-2 text-center">Add New</div>
           </div>
           {/* ここから */}
-          <Transition>
-
+          <Transition appear show={isOpen} as={Fragment}>
+            <Dialog
+              as="div"
+              className=""
+              onClose={closeModal}
+            >
+            テスト
+            </Dialog>
           </Transition>
         </>
     );
