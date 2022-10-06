@@ -105,12 +105,32 @@ export const AddTitle = (props: Props) => {
                         }}
                       />
                     </div>
-                    <div>
-                        {/* ここからボタン */}
+                    <div className="flex justify-center mt-4">
+                      <div className="w-32 p-2">
+                        <Button
+                         block
+                         type="default"
+                         size="large"
+                         icon={<IconX />}
+                         onClick={closeModal}
+                        >
+                          Cancel
+                        </Button>
+                      </div>
+                      <div className="w-32 p-2">
+                        <Button
+                         block
+                         size="large"
+                         icon={<IconPlus />}
+                         onClick={() => handleAdd(props.uuid)}
+                        >
+                          Add
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </Transition.Child>
-            </div>
+              </div>
             </Dialog>
           </Transition>
         </>
